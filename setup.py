@@ -19,18 +19,18 @@ def get_version(rel_path: str) -> str:
 
 
 setup(
-    name='chris-plugin-template',
-    version=get_version('app.py'),
-    description='A ChRIS DS plugin template',
+    name='lgd-hemis',
+    version=get_version('lgd_hemis.py'),
+    description='White-matter hemisphere extraction for the LGD project',
     author='FNNDSC',
-    author_email='dev@babyMRI.org',
-    url='https://github.com/FNNDSC/python-chrisapp-template',
-    py_modules=['app'],
-    install_requires=['chris_plugin'],
+    author_email='Jennings.Zhang@childrens.harvard.edu',
+    url='https://github.com/FNNDSC/pl-lgd-hemis',
+    py_modules=['lgd_hemis'],
+    install_requires=['chris_plugin==0.1.2', 'loguru~=0.6.0'],
     license='MIT',
     entry_points={
         'console_scripts': [
-            'commandname = app:main'
+            'lgd_hemis = lgd_hemis:main'
         ]
     },
     classifiers=[
